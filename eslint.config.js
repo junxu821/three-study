@@ -1,7 +1,7 @@
 import globals from 'globals';
 import pluginJs from '@eslint/js';
 import tseslint from 'typescript-eslint';
-import pluginVue, { rules } from 'eslint-plugin-vue';
+import pluginVue from 'eslint-plugin-vue';
 import eslintConfigPrettier from 'eslint-config-prettier';
 export default [
     { files: ['**/*.{js,mjs,cjs,ts,vue}'] },
@@ -10,8 +10,7 @@ export default [
             globals: globals.browser,
             ecmaVersion: 12, // 使用最新的 ECMAScript 语法
             sourceType: 'module', // 代码是 ECMAScript 模块
-            parserOptions: { parser: tseslint.parser }, // 使用 TypeScript 解析器,
-            node: true
+            parserOptions: { parser: tseslint.parser } // 使用 TypeScript 解析器,
         }
     },
     pluginJs.configs.recommended,
@@ -19,11 +18,6 @@ export default [
     ...pluginVue.configs['flat/essential'],
     eslintConfigPrettier,
     { files: ['**/*.vue'], languageOptions: { parserOptions: { parser: tseslint.parser } } },
-    {
-        rules: {
-            'prettier/prettier': 'error'
-        }
-    },
     {
         ignores: [
             '**/dist',
@@ -46,8 +40,5 @@ export default [
             '/bin',
             'Dockerfile'
         ]
-    },
-    {
-        extends: ['plugin:prettier/recommended']
     }
 ];

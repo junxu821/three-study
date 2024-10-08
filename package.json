@@ -4,6 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "prepare": "husky install",
     "dev": "vite",
