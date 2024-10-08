@@ -7,9 +7,11 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": "./dist/index.js"
     }
   },
   "scripts": {
@@ -25,6 +27,7 @@
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
     "pinia": "^2.2.4",
+    "three": "^0.169.0",
     "vue": "^3.5.10",
     "vue-router": "^4.4.5"
   },
@@ -35,6 +38,7 @@
     "@commitlint/config-conventional": "^19.5.0",
     "@eslint/js": "^9.12.0",
     "@types/node": "^22.7.5",
+    "@types/three": "^0.169.0",
     "@vitejs/plugin-vue": "^5.1.4",
     "eslint": "^9.12.0",
     "eslint-config-prettier": "^9.1.0",

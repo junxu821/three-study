@@ -3,7 +3,8 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
-// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore eslint-ignore
 import eslintPlugin from 'vite-plugin-eslint'
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,7 +12,9 @@ export default defineConfig({
   AutoImport({
     imports: ["vue", "vue-router", "pinia"],
     eslintrc: {
-      enabled: false,
+      enabled: true, 
+      filepath: './.eslintrc-auto-import.js',
+      globalsPropValue: 'readonly',
     },
     dts: "src/auto-imports.d.ts",
   }),
