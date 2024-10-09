@@ -12,7 +12,7 @@ const renderer = new THREE.WebGLRenderer();
 let cube: THREE.Object3D<THREE.Object3DEventMap>;
 const init = () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
+    containerRef.value?.appendChild(renderer.domElement);
 
     const geometry = new THREE.BoxGeometry(1, 1, 1);
     const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
