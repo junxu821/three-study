@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
+import viteCompression from 'vite-plugin-compression'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore eslint-ignore
 import eslintPlugin from 'vite-plugin-eslint'
@@ -24,7 +25,12 @@ export default defineConfig({
     exclude: ['node_modules/**', 'dist/**'],    // 指定不需要检查的文件
     fix: true,    // 是否自动修复
     cache: false    // 是否启用缓存
-  })
+  }),
+  viteCompression({
+    // threshold: 10240 ,
+    algorithm: 'gzip',
+    // deleteOriginFile: false, // 不删除源文件// 对大于 1mb 的文件进行压缩
+  }),
   ],
   resolve: {
     alias: {
