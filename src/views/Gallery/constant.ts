@@ -128,7 +128,8 @@ export const BOARDS_INFO: Record<string, {title: string, author: string, describ
 /*
 * Computer Iframe SRC
 * */
-export const IFRAME_SRC = new URL("/universe/index.html", import.meta.url).href;
+// export const IFRAME_SRC = new URL("/universe/index.html", import.meta.url).href;
+export const IFRAME_SRC = 'https://www.xu69.com/';
 
 /*
 * Events

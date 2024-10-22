@@ -1,6 +1,6 @@
 import mitt from "mitt";
 
-export default class EeventBus {
+class EeventBus {
 	/**
  * 全局唯一的入口操作实例
  */

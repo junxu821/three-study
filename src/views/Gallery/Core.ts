@@ -1,8 +1,9 @@
-import { ACESFilmicToneMapping, Clock, Color, Loader, PerspectiveCamera, Scene, SRGBColorSpace, WebGLRenderer } from "three";
+import { ACESFilmicToneMapping, Clock, Color, PerspectiveCamera, Scene, SRGBColorSpace, WebGLRenderer } from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import World from "./World";
 import ControlManage from "./ControlManage";
 import UI from "./UI";
+import Loader from "./Loader";
 
 /**
  * 入口类
@@ -33,12 +34,12 @@ class Entry {
 	/**
 	 * 声明一个轨道控制对象，用于鼠标或触摸事件来改变相机的位置和方向
 	 */
-	orbit_controls!: OrbitControls;
+	orbitControls!: OrbitControls;
 	/**
 	 * world做全局交互的调度
 	 */
 	world!: World;
-	control_manage!: ControlManage;
+	controlManage!: ControlManage;
 	loader!: Loader;
 	ui!: UI
 	constructor() { }
@@ -67,7 +68,7 @@ class Entry {
 	 */
 	private _init() {
 		// 初始化轨道控制器，用于控制相机的旋转、缩放等操作
-		this.orbit_controls = new OrbitControls(this.camera, this.renderer.domElement);
+		this.orbitControls = new OrbitControls(this.camera, this.renderer.domElement);
 		// 初始化场景
 		this._initScene();
 		// 初始化相机
@@ -79,7 +80,7 @@ class Entry {
 		// 初始化用户界面
 		this.ui = new UI();
 		// 初始化控制管理器
-		this.control_manage = new ControlManage();
+		this.controlManage = new ControlManage();
 		// 初始化加载器
 		this.loader = new Loader();
 		// 初始化世界
@@ -95,7 +96,7 @@ class Entry {
 			this.renderer.render(this.scene, this.camera);
 			const delta_time = Math.min(0.05, this.clock.getDelta());
 			this.world.update(delta_time);
-			this.orbit_controls.update();
+			this.orbitControls.update();
 		});
 	}
 	/**
@@ -103,8 +104,7 @@ class Entry {
 	 */
 	private _initScene() {
 		// 设置场景的背景颜色为黑色
-		// this.scene.background = new Color(0x000000);
-		this.scene.background = new Color(0xffffff);
+		this.scene.background = new Color(0x000000);
 	}
 	/**
 	 * 初始化相机参数
