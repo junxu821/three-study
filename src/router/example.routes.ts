@@ -80,6 +80,12 @@ export default {
       title: '测试纹理'
     }
   },
-
+  {
+    path: 'Gallery',
+    component: () => import("@/views/Gallery/index.vue"),
+    meta: {
+      title: '画廊'
+    }
+  }
   ]
 }
