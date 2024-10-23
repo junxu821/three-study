@@ -1,8 +1,8 @@
 import Layout from '@/layout/index.vue'
 export default {
-  path: '/example',
+  path: '/',
   component: Layout,
-  redirect: '/example/HelloWorld',
+  redirect: '/HelloWorld',
   children: [{
     path: 'HelloWorld',
     component: () => import("@/views/HelloWorld.vue"),
