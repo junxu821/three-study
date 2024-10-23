@@ -81,11 +81,62 @@ export default {
     }
   },
   {
+    path: 'TestGui',
+    component: () => import("@/views/TestGui.vue"),
+    meta: {
+      title: 'gui'
+    }
+  },
+  {
+    path: 'TestVector3',
+    component: () => import("@/views/TestVector3.vue"),
+    meta: {
+      title: 'gui'
+    }
+  },
+
+  {
     path: 'Gallery',
     component: () => import("@/views/Gallery/index.vue"),
     meta: {
       title: '画廊'
     }
-  }
+  },
+  {
+    path: 'TestArc',
+    component: () => import("@/views/Line/TestArc.vue"),
+    meta: {
+      title: '圆弧'
+    }
+  },
+  {
+    path: 'TestMapControls',
+    component: () => import("@/views/TestMapControls.vue"),
+    meta: {
+      title: '地图控件'
+    }
+  },
+  {
+    path: 'TestSpotLight',
+    component: () => import("@/views/Light/TestSpotLight.vue"),
+    meta: {
+      title: '聚光灯'
+    }
+  },
+  {
+    path: 'TestOutlinePass',
+    component: () => import("@/views/TestOutlinePass.vue"),
+    meta: {
+      title: '线框'
+    }
+  },
+  {
+    path: 'TestBloom',
+    component: () => import("@/views/TestBloom.vue"),
+    meta: {
+      title: '线框'
+    }
+  },
+
   ]
 }
