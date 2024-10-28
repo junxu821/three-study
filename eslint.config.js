@@ -27,7 +27,8 @@ export default [
             '@typescript-eslint/no-explicit-any': 'off',
             "vue/multi-word-component-names": ["error",{
                 "ignores": ["index"]//需要忽略的组件名
-             }]
+             }],
+             '@typescript-eslint/no-unused-expressions':'off'
         }
     },
     {

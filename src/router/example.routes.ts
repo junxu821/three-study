@@ -137,6 +137,20 @@ export default {
       title: '线框'
     }
   },
+  {
+    path: 'SkyBox',
+    component: () => import("@/views/SkyBox/index.vue"),
+    meta: {
+      title: '天空盒'
+    }
+  },
+  {
+    path: 'demo1',
+    component: () => import("@/views/demo1/index.vue"),
+    meta: {
+      title: '天空盒'
+    }
+  }
 
   ]
 }
