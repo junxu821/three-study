@@ -157,7 +157,13 @@ export default {
     meta: {
       title: '雨滴'
     }
+  },
+  {
+    path: 'TestAnimation',
+    component: () => import('@/views/TestAnimation/index.vue'),
+    meta: {
+      title: '测试动画'
+    }
   }
-
   ]
 }
