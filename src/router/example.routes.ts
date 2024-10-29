@@ -164,6 +164,20 @@ export default {
     meta: {
       title: '测试动画'
     }
+  },
+  {
+    path: 'TestSky',
+    component: () => import('@/views/TestSky.vue'),
+    meta: {
+      title: '测试天空插件'
+    }
+  },
+  {
+    path: 'TestTeapot',
+    component: () => import('@/views/TestTeapot.vue'),
+    meta: {
+      title: '茶壶'
+    }
   }
   ]
 }
