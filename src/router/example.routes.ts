@@ -150,6 +150,13 @@ export default {
     meta: {
       title: '天空盒'
     }
+  },
+  {
+    path: 'TestRain',
+    component: () => import('@/views/TestRain/index.vue'),
+    meta: {
+      title: '雨滴'
+    }
   }
 
   ]
