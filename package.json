@@ -23,7 +23,9 @@
     "lint:fix": "eslint . --ext .js,.mjs,.cjs,.ts,.vue --fix"
   },
   "dependencies": {
+    "@tweenjs/tween.js": "^25.0.0",
     "axios": "^1.7.7",
+    "echarts": "^5.5.1",
     "mitt": "^3.0.1",
     "nipplejs": "^0.10.2",
     "normalize.css": "^8.0.1",

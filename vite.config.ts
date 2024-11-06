@@ -39,7 +39,7 @@ export default defineConfig({
     }
   },
   server:{
-    port:8084
+    port:8084,
   },
   build: {
     sourcemap: false,
